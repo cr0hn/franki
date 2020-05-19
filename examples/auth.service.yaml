@@ -1,0 +1,39 @@
+registries:
+  - name: private-dockerhub
+    server: xxxxxx
+    auth:
+      user: asdfasdf
+      password: asdfasdf
+
+repositories:
+  - name: gitlab
+    server: xxxxxx
+    auth:
+      user: asdfasdf
+      password: asdfasdf
+
+service:
+  version: 1.0.0
+  name: Auth-Service
+  port: 9999
+  urls:
+    - /auth/v1
+    - /oauth
+  environment:
+    - REDIS
+    - USER
+    - S3-BUCKET
+  secrets:
+    - Secret1
+  repository: gitlab
+  command: asdfasdf
+  entrypoint: asdfasdfasd
+  dependencies:
+    - name: redis
+      registry: private-dockerhub
+      image: redis/adsfasdf
+      environment:
+        - asdf
+        - asdf
+        - asdf
+        - asdf
