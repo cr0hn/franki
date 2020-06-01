@@ -17,7 +17,7 @@ jobs:
         run: zip -r docs/catalog.zip catalog/
 
       - name: Checksum catalog
-        run: python -c "import hashlib; h=hashlib.sha512();h.update(open('docs/catalog.zip', 'rb').read()); print(h.hexdigest(), end='')" > docs/catalog.checksum.asc
+        run: python3 -c "import hashlib; h=hashlib.sha512();h.update(open('docs/catalog.zip', 'rb').read()); print(h.hexdigest(), end='')" > docs/catalog.checksum.asc
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
