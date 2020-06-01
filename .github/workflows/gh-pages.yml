@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+    paths:
+      - docs/**
+
 jobs:
   deploy:
     runs-on: ubuntu-18.04

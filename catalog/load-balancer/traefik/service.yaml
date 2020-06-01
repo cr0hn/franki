@@ -1,0 +1,12 @@
+name: traefik
+description: |
+  Traefik as load balancer. Traefik support native integration with Docker Swarm and Let's Encrypt SSL.
+tags:
+  - traefik
+  - lb
+author:
+  name: cr0hn
+  home: http://cr0hn.com
+works_on:
+  mode: swarm
+  template: traefik.swarm.jinja2

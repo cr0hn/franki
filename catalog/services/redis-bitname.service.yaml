@@ -1,0 +1,17 @@
+description: |
+  Redis image from Bitname. Configured for less footpring and removing some dangerous Redis commands.
+tags:
+  - redis
+  - security
+author:
+  name: cr0hn
+  home: http://cr0hn.com
+service:
+  name: redis
+  image: bitnami/redis
+  ports:
+    - 6379:6379
+  environment:
+    - ALLOW_EMPTY_PASSWORD=yes
+    - DISABLE_COMMANDS=FLUSHDB,FLUSHALL,CONFIG
+  command: /run.sh --maxmemory 300mb
