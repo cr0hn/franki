@@ -7,6 +7,7 @@ tags:
 author:
   name: cr0hn
   home: http://cr0hn.com
-works_on:
-  mode: swarm
-  template: traefik.swarm.jinja2
+config:
+  works_on:
+    mode: swarm
+    template: traefik.swarm.jinja2

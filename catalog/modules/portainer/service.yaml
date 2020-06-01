@@ -14,6 +14,7 @@ tags:
 author:
   name: XXXX
   home: http://asdfasdf.com
-works_on:
-  mode: swarm
-  template: portainer.swarm.jinja2
+config:
+  works_on:
+    mode: swarm
+    template: portainer.swarm.jinja2
