@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v1  # v2 does not have submodules option now
 
       - name: Zip catalog
-        run: zip docs/catalog.zip catalog
+        run: zip -r docs/catalog.zip catalog
 
       - name: Checksum catalog
         run: python -c "import hashlib; h=hashlib.sha512();h.update(open('docs/catalog.zip', 'rb').read()); print(h.hexdigest())" > docs/catalog.checksum.asc
