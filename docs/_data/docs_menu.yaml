@@ -1,0 +1,15 @@
+menu:
+   - title: Swarm plugins
+     icon: fas fa-map-signs
+     excerpt: Pequeña descripción
+     sections:
+      - title: Section Item 1.1
+        link: #item-1-2
+
+   - title: Developers
+     icon: fas fa-map-signs
+     excerpt: Developers section
+     sections:
+      - title: Section Item 1.1
+        link: #item-1-2
+

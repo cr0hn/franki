@@ -1,0 +1,19 @@
+<div id="docs-sidebar" class="docs-sidebar">
+    <div class="top-search-box d-lg-none p-3">
+        <form class="search-form">
+            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+    <nav id="docs-nav" class="docs-nav navbar">
+        <ul class="section-items list-unstyled nav flex-column pb-3">
+            {% for menus in site.data.docs_menu.menu %}
+            <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder mr-2"><i class="{{ menus.icon }}"></i></span>{{ menus.title }}</a></li>
+                {% for section in menus.sections %}
+                <li class="nav-item"><a class="nav-link scrollto" href="{{ section.link }}">{{ section.title}}</a></li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+
+    </nav><!--//docs-nav-->
+</div><!--//docs-sidebar-->
