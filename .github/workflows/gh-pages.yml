@@ -7,20 +7,29 @@ on:
 
     paths:
       - docs/**
+      - catalog/**
 
 jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1  # v2 does not have submodules option now
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.8'
 
 #      - name: Build Doc
 #        run: python3 build_doc.py
+      - name: Zip catalog
+        run: zip -r docs/catalog.zip catalog/
+
+      - name: Checksum catalog
+        run: python3 -c "import hashlib; h=hashlib.sha512();h.update(open('docs/catalog.zip', 'rb').read()); print(h.hexdigest(), end='')" > docs/catalog.checksum.asc
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-          keep_files: true
+          keep_files: false
           enable_jekyll: true
