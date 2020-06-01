@@ -1,0 +1,19 @@
+name: portainer
+description: |
+  asdfasdfsdfasdfasdf asd f asdf as df sad f
+  asdf
+  asd
+  f
+  asd
+  f
+  asd
+  f
+tags:
+  - redis
+  - security
+author:
+  name: XXXX
+  home: http://asdfasdf.com
+works_on:
+  mode: swarm
+  template: portainer.swarm.jinja2

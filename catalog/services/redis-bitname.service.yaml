@@ -1,3 +1,4 @@
+name: bitnami-redis
 description: |
   Redis image from Bitname. Configured for less footpring and removing some dangerous Redis commands.
 tags:

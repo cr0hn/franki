@@ -578,3 +578,8 @@ gradle-app.setting
 pyvenv.cfg
 pip-selfcheck.json
 .idea/
+
+# Jekyll
+.jekyll-metadata
+.jekyll-cache
+_site
