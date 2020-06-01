@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<body class="docs-page">
+
+{% include docs_header.html %}
+{% include docs_navigation.html %}
+
+<div class="docs-wrapper">
+    <div class="docs-content">
+        <div class="container">
+
+            {{ content }}
+
+            <footer class="footer">
+                <div class="container text-center py-5">
+                    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                    <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+                    <ul class="social-list list-unstyled pt-4 mb-0">
+                        <li class="list-inline-item"><a href="https://github.com/cr0hn/franki"><i class="fab fa-github fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/ggdaniel"><i class="fab fa-twitter fa-fw"></i></a></li>
+                    </ul><!--//social-list-->
+                </div>
+            </footer>
+        </div>
+    </div>
+</div><!--//docs-wrapper-->
+
+
+----
+<!-- Javascript -->
+<script src="{{ "assets/plugins/jquery-3.4.1.min.js" | relative_url }}"></script>
+<script src="{{ "assets/plugins/popper.min.js" | relative_url }}"></script>
+<script src="{{ "assets/plugins/bootstrap/js/bootstrap.min.js" | relative_url }}"></script>
+
+
+<!-- Page Specific JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script src="{{ "assets/js/highlight-custom.js" | relative_url }}"></script>
+<script src="{{ "assets/plugins/jquery.scrollTo.min.js" | relative_url }}"></script>
+<script src="{{ "assets/plugins/lightbox/dist/ekko-lightbox.min.js" | relative_url }}"></script>
+<script src="{{ "assets/js/docs.js" | relative_url }}"></script>
